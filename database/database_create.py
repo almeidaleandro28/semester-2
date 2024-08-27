@@ -29,3 +29,18 @@ class Connect:
         USER_ADDRESS,\
         )\
       ")
+
+def create_tb_loan( self ) -> None:
+   
+   self.cursor.execute(
+      "CREATE TABLE IF NOT EXISTS TB_LOAN ( \
+        LOAN_ID,\
+        LOAN_ID_BOOK,\
+        LOAN_ID_USER,\
+        LOAN_DAYS,\
+        LOAN_DATA_LOAN,\
+        LOAN DATA_DEVOLUTION,\
+        FOREIGN KEY (LOAN_ID_BOOK) REFERENCES TB_BOOK(BOOK_ID),\
+        FOREIGN KEY (LOAN_ID_USER) REFERENCES TB_USER(USER_ID),\
+        )\
+      ")
